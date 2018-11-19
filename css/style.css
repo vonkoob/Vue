@@ -1,0 +1,17 @@
+body {
+    background-color:powderblue;
+}
+
+.main-content {
+    background-color:cornflowerblue;
+}
+
+#sensitive {
+    /* background-image:; */
+    font-style: italic;
+}
+
+.row {
+    margin-bottom: 5px;
+    background-color:lavenderblush;
+}
