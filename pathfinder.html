@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
-    <title>Vue Index</title>
+    <title>PF Helper</title>
 </head>
 
 <body>
@@ -59,10 +59,73 @@
             </form>
         </div>
     </nav>
-    <div class="container main-content">
-        <div class="row">
-            <div class="col" id="welcome">
-                {{ message }}
+    
+    <div class="wrapper">
+        <!-- Sidebar -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Dummy Header</h3>
+            </div>
+
+            <ul class="list-unstyled components">
+                <p>Dummy Paragraph Tag</p>
+                <li class="active">
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
+                            <a href="">Home 1</a>
+                        </li>
+                        <li>
+                            <a href="">Home 2</a>
+                        </li>
+                        <li>
+                            <a href="">Home 3</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="">Page 1</a>
+                        </li>
+                        <li>
+                            <a href="">Page 2</a>
+                        </li>
+                        <li>
+                            <a href="">Page 3</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Portfolio</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- Page Content -->
+        <div class="container main-content">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fas fa-align-left"></i>
+                        <span>Toggle Sidebar</span>
+                    </button>
+                </div>
+            </nav>
+            <div class="row">
+                <div class="col card">
+                    <ul id="cardlist">
+                        <li v-for="(value, key) in object">
+                            {{ key }}: {{ value }}
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -75,7 +138,7 @@
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
-    <script type='text/javascript' src="index.js"></script>
+    <script type='text/javascript' src="pathfinder.js"></script>
 </footer>
 
 </html>
